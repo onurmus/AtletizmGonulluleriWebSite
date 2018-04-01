@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Atletizm Gönülleri</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <!--meta name="msapplication-TileImage" content="<%=ResolveClientUrl("Images/icon/ms-icon-144x144.png") %>">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="<%=ResolveClientUrl("manifest.json") %>">
+    <link rel="apple-touch-icon" sizes="57x57" href="<%=ResolveClientUrl("Images/icon/apple-icon-57x57.png") %>">
+    <link rel="apple-touch-icon" sizes="60x60" href="<%=ResolveClientUrl("Images/icon/apple-icon-60x60.png") %>">
+    <link rel="apple-touch-icon" sizes="72x72" href="<%=ResolveClientUrl("Images/icon/apple-icon-72x72.png") %>">
+    <link rel="apple-touch-icon" sizes="76x76" href="<%=ResolveClientUrl("Images/icon/apple-icon-76x76.png") %>">
+    <link rel="apple-touch-icon" sizes="114x114" href="<%=ResolveClientUrl("Images/icon/apple-icon-114x114.png") %>">
+    <link rel="apple-touch-icon" sizes="120x120" href="<%=ResolveClientUrl("Images/icon/apple-icon-120x120.png") %>">
+    <link rel="apple-touch-icon" sizes="144x144" href="<%=ResolveClientUrl("Images/icon/apple-icon-144x144.png") %>">
+    <link rel="apple-touch-icon" sizes="152x152" href="<%=ResolveClientUrl("Images/icon/apple-icon-152x152.png") %>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%=ResolveClientUrl("Images/icon/apple-icon-180x180.png") %>">
+    <link rel="icon" type="image/png" sizes="192x192"  href="<%=ResolveClientUrl("images/icon/android-icon-192x192.png") %>" >
+    <link rel="icon" type="image/png" sizes="32x32" href="<%=ResolveClientUrl("images/icon/favicon-32x32.png") %>" >
+    <link rel="icon" type="image/png" sizes="96x96" href="<%=ResolveClientUrl("images/icon/favicon-96x96.png" ) %>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%=ResolveClientUrl("images/icon/favicon-16x16.png") %>"-->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="Styles/bootstrap-flatly.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  	<script type="text/javascript" src="Scripts/mainController.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    
+
+    <style type="text/css">
+        .seperated-li {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border-bottom: 1px solid;
+            border-bottom-color: #e5e5e5;
+        }
+
+        .progress .progress-bar {
+            font-size: 13px;
+            line-height: 21px;
+        }
+
+        .progress {
+            height: 21px;
+        }
+
+        li > a{
+        	color: white !important;
+        }
+
+        .row {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+
+        function showProgressBar() {
+            $("#progressBar").show();
+            $("#contentDiv").hide();
+        }
+        function hideProgressBar() {
+            $("#progressBar").hide();
+            $("#contentDiv").show();
+        }
+        showProgressBar();
+
+
+        $(document).ready(function () {
+            $('form').on('submit', function () {
+                showProgressBar();
+            });
+
+            hideProgressBar();
+
+            $('nav div div ul li ul li a').on('click', function () {
+                showProgressBar();
+            });
+        });
+
+    </script>
+</head>
+<body ng-app="SinglePageApp" ng-controller="HomeController">
+
+	<div style="position: fixed; right: 10px; bottom: 10px;">
+		<img class="img-responsive" style="max-height: 100px;" src="Images/rio.png">
+	</div>
+
+<div class="row">
+
+        <div class="progress" style="position: fixed; top: 30%; left: 25%; width: 50%; position: center;" id="progressBar">
+            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                Lütfen Bekleyiniz
+            </div>
+        </div>
+    </div>
+	 <div id="contentDiv">
+
+      <nav class="navbar navbar-default" style="min-height: 40px; background-color: #0c3c60; color: white !important;"> <!-- eski renk: 0c3c60 -->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="color:white;" href="/">
+                        Atletizm Gönülleri Derneği
+                    </a>
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav  navbar-right">
+                        <li>
+                            <a href="#!/"><span class="glyphicon glyphicon-home"></span> Anasayfa</a>
+                        </li>
+                        <li>
+                            <a href="#!about"><span class="glyphicon glyphicon-globe"></span> Hakkımızda</a>
+                        </li>
+                        <li>
+                            <a href="#!events"><span class="glyphicon glyphicon-pushpin"></span> Etkinlikler</a>                           
+                        </li>
+                        <li>
+                            <a href="#!donation"><span class="glyphicon glyphicon-list-alt"></span> Bağışlar</a>
+                        </li>
+                        <li>
+                            <a href="#!contact"><span class="glyphicon glyphicon-envelope"></span> İletişim</a>
+                        </li>
+                    </ul>
+                     
+                    <!--ul class="nav navbar-nav navbar-right" style="display: flex;">
+                        
+                        <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
+                        <li runat="server" id="guideLi"><a href="#"><span class="glyphicon glyphicon-question-sign"></span></a></li>
+                        <li><a href="javascript:reportprinter();"><span class="glyphicon glyphicon-print"></span></a></li> 
+                       
+                    </ul--> 
+                   
+                </div>
+                <!-- /.navbar-collapse -->
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+    	<div ng-view></div>
+    </div>
+
+  
+
+</body>
+</html>

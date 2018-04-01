@@ -1,0 +1,52 @@
+
+<script type="text/javascript">
+  function initMap() {
+    var mapCanvas = document.getElementById('map-canvas');
+    var myLatlng = new google.maps.LatLng(41.085449, 29.040353);
+    var mapOptions = {
+      center: myLatlng,
+      zoom: 17,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Boğaziçi Atletizm!'
+  });
+
+  }
+
+</script>
+ <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa1F7af9zQv-vhdok9d5OhshLtgFBU99M&callback=initMap">
+  </script>
+
+<style>
+
+      .map-responsive{
+          z-index: 1;
+          position: relative;
+          left: 20;
+          top: 20;
+          width: 100%;
+          height: 300px;
+      }
+    </style>
+
+<div class="row">
+  <div class="row">
+      <h2>
+        İletişim
+      </h2>
+  </div>
+  <div class="row">
+      <div style="float:left;margin-right: 30px;overflow: hidden;" class="map-responsive" id="map-canvas"></div>
+      <div style="float:left;"><b>E-mail:</b> bilgi@atletizmgonulluleri.org
+              </div>
+  </div>
+
+</div>
+
+    
